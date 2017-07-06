@@ -12,5 +12,13 @@
     "symetric"
   ],
   "author": "Maciej Krüger <mkg20001@gmail.com>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkg20001/peer-request.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkg20001/peer-request/issues"
+  },
+  "homepage": "https://github.com/mkg20001/peer-request#readme"
 }
