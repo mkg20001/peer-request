@@ -1,6 +1,6 @@
 {
   "name": "peer-request",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A meta-class for peer-to-peer-requests using symetric protocols.",
   "main": "index.js",
   "scripts": {

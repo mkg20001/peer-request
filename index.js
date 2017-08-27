@@ -39,8 +39,8 @@ function PeerRequest(name, inputDefinition, outputDefinition, validate) {
     })
   }
 
-  self.defIn = outputDefinition
-  self.defOut = inputDefinition
+  self.defIn = inputDefinition
+  self.defOut = outputDefinition
   self.name = name
 }
 module.exports = PeerRequest
