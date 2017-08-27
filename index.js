@@ -9,13 +9,21 @@ function PeerRequest(name, inputDefinition, outputDefinition, validate) {
 
     send(data, (err, data) => {
       if (err) return cb(err)
-      validate(outputDefinition, data)
+      try {
+        validate(outputDefinition, data)
+      } catch (e) {
+        cb(e)
+      }
       return cb(null, data)
     })
   }
 
   self.handleRequest = (respond, data, handler) => {
-    validate(inputDefinition, data)
+    try {
+      validate(inputDefinition, data)
+    } catch (e) {
+      return respond(e)
+    }
     handler(data, (err, res) => {
       if (err) return respond(err)
       validate(outputDefinition, res)

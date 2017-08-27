@@ -1,6 +1,6 @@
 {
   "name": "peer-request",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A meta-class for peer-to-peer-requests using symetric protocols.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "symetric"
   ],
   "author": "Maciej Krüger <mkg20001@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mkg20001/peer-request.git"
