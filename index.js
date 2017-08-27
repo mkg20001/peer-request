@@ -3,7 +3,11 @@
 function PeerRequest(name, inputDefinition, outputDefinition, validate) {
   const self = this
   self.sendRequest = (send, data, cb) => {
-    validate(inputDefinition, data)
+    try {
+      validate(inputDefinition, data)
+    } catch (e) {
+      cb(e)
+    }
 
     if (typeof cb != "function") throw new Error("CB must be a function")
 
@@ -26,7 +30,11 @@ function PeerRequest(name, inputDefinition, outputDefinition, validate) {
     }
     handler(data, (err, res) => {
       if (err) return respond(err)
-      validate(outputDefinition, res)
+      try {
+        validate(outputDefinition, data)
+      } catch (e) {
+        return respond(e)
+      }
       return respond(null, res)
     })
   }
